@@ -10,9 +10,17 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
+    models/src/build_place.cpp \
+    models/src/invoice.cpp \
+    models/src/kit.cpp \
+    models/src/part.cpp \
     partslistwidget.cpp
 
 HEADERS += \
+    models/include/build_place.h \
+    models/include/invoice.h \
+    models/include/kit.h \
+    models/include/part.h \
     partslistwidget.h
 
 FORMS += \
