@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>PartsListWidget</string>
   </property>
+  <widget class="QTableView" name="partsListTableView">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>51</y>
+     <width>791</width>
+     <height>481</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

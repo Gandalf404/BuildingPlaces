@@ -2,6 +2,8 @@
 #define PARTSLISTWIDGET_H
 
 #include <QWidget>
+#include "classes/include/connection.h"
+#include <QSqlRelationalTableModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +21,7 @@ public:
 
 private:
     Ui::PartsListWidget *ui;
+    Connection con;
+    QSqlRelationalTableModel* model;
 };
 #endif // PARTSLISTWIDGET_H
