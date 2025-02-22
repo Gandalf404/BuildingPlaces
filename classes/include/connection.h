@@ -1,7 +1,7 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
-#include <QtSql/QSqlDatabase>
+#include <QSqlDatabase>
 #include <QFile>
 
 class Connection
