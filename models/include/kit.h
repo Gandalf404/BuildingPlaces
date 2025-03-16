@@ -2,7 +2,6 @@
 #define KIT_H
 
 #include <QDate>
-#include <optional>
 
 class Kit
 {
@@ -12,16 +11,16 @@ private:
     int kitCount;
     QDate kitFinishDate;
 public:
-    int getKitId();
-    void setKitId(int& kitId);
-    QString getKitName();
-    void setKitName(QString& kitName);
-    int getKitCount();
-    void setKitCount(int& kitCount);
-    QDate getKitFinishDate();
-    void setKitFinishDate(QDate& kitFinishDate);
+    int getKitId() const;
+    void setKitId(int kitId);
+    QString getKitName() const;
+    void setKitName(const QString& kitName);
+    int getKitCount() const;
+    void setKitCount(int kitCount);
+    QDate getKitFinishDate() const;
+    void setKitFinishDate(const QDate& kitFinishDate);
 
-    Kit(std::optional<Kit&> kit);
-    Kit(int& kitId, QString& kitName, int& kitCount, QDate& kitFinishDate);
+    Kit();
+    Kit(int kitId, const QString& kitName, int kitCount, const QDate& kitFinishDate);
 };
 #endif //KIT_H

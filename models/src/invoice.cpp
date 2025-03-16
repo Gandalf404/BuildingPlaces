@@ -1,35 +1,35 @@
 #include "../include/invoice.h"
 
-int Invoice::getInvoiceId() { return this->invoiceId; }
+int Invoice::getInvoiceId() const { return invoiceId; }
 
-void Invoice::setInvoiceId(int& invoiceId) { this->invoiceId = invoiceId; }
+void Invoice::setInvoiceId(int invoiceId) { this->invoiceId = invoiceId; }
 
-QDate Invoice::getInvoiceDate() { return this->invoiceDate; }
+QDate Invoice::getInvoiceDate() const { return invoiceDate; }
 
-void Invoice::setInvoiceDate(QDate& invoiceDate) { this->invoiceDate = invoiceDate; }
+void Invoice::setInvoiceDate(const QDate& invoiceDate) { this->invoiceDate = invoiceDate; }
 
-int Invoice::getPartId() { return this->partId; }
+int Invoice::getPartId() const { return partId; }
 
-void Invoice::setPartId(int& partId) { this->partId = partId; }
+void Invoice::setPartId(int partId) { this->partId = partId; }
 
-int Invoice::getKitId() { return this->kitId; }
+int Invoice::getKitId() const { return kitId; }
 
-void Invoice::setKitId(int& kitId) { this->kitId = kitId; }
+void Invoice::setKitId(int kitId) { this->kitId = kitId; }
 
-QString Invoice::getInvoiceStatus() { return this->invoiceStatus; }
+QString Invoice::getInvoiceStatus() const { return invoiceStatus; }
 
-void Invoice::setInvoiceStatus(QString& invoiceStatus) { this->invoiceStatus = invoiceStatus; }
+void Invoice::setInvoiceStatus(const QString& invoiceStatus) { this->invoiceStatus = invoiceStatus; }
 
-int Invoice::getPartCount() { return this->partCount; }
+int Invoice::getPartCount() const { return partCount; }
 
-void Invoice::setPartCount(int& partCount) { this->partCount = partCount; }
+void Invoice::setPartCount(int partCount) { this->partCount = partCount; }
 
-int Invoice::getKitCount() { return this->kitCount; }
+int Invoice::getKitCount() const { return kitCount; }
 
-void Invoice::setKitCount(int& kitCount) { this->kitCount = kitCount; }
+void Invoice::setKitCount(int kitCount) { this->kitCount = kitCount; }
 
-Invoice::Invoice(int& invoiceId, QDate& invoiceDate, int& partId, int& kitId, QString& invoiceStatus,
-                 int& partCount, int& kitCount)
+Invoice::Invoice(int invoiceId, const QDate& invoiceDate, int partId, int kitId, const QString& invoiceStatus,
+                 int partCount, int kitCount)
     : invoiceId(invoiceId)
     , invoiceDate(invoiceDate)
     , partId(partId)

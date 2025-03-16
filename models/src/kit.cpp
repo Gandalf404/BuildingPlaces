@@ -1,22 +1,22 @@
 #include "../include/kit.h"
 
-int Kit::getKitId() { return this->kitId; }
+int Kit::getKitId() const { return kitId; }
 
-void Kit::setKitId(int& kitId) { this->kitId = kitId; }
+void Kit::setKitId(int kitId) { this->kitId = kitId; }
 
-QString Kit::getKitName() { return this->kitName; }
+QString Kit::getKitName() const { return kitName; }
 
-void Kit::setKitName(QString& kitName) { this->kitName = kitName; }
+void Kit::setKitName(const QString& kitName) { this->kitName = kitName; }
 
-int Kit::getKitCount() { return this->kitCount; }
+int Kit::getKitCount() const { return kitCount; }
 
-void Kit::setKitCount(int& kitCount) { this->kitCount = kitCount; }
+void Kit::setKitCount(int kitCount) { this->kitCount = kitCount; }
 
-QDate Kit::getKitFinishDate() { return this->kitFinishDate; }
+QDate Kit::getKitFinishDate() const { return kitFinishDate; }
 
-void Kit::setKitFinishDate(QDate& kitFinishDate) { this->kitFinishDate = kitFinishDate; }
+void Kit::setKitFinishDate(const QDate& kitFinishDate) { this->kitFinishDate = kitFinishDate; }
 
-Kit::Kit(int& kitId, QString& kitName, int& kitCount, QDate& kitFinishDate)
+Kit::Kit(int kitId, const QString& kitName, int kitCount, const QDate& kitFinishDate)
     : kitId(kitId)
     , kitName(kitName)
     , kitCount(kitCount)

@@ -11,7 +11,8 @@ SOURCES += \
     models/src/invoice.cpp \
     models/src/kit.cpp \
     models/src/part.cpp \
-    partslistwidget.cpp
+    partslistwidget.cpp \
+    partwidget.cpp
 
 HEADERS += \
     classes/include/connection.h \
@@ -19,10 +20,12 @@ HEADERS += \
     models/include/invoice.h \
     models/include/kit.h \
     models/include/part.h \
-    partslistwidget.h
+    partslistwidget.h \
+    partwidget.h
 
 FORMS += \
-    partslistwidget.ui
+    partslistwidget.ui \
+    partwidget.ui
 
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

@@ -1,26 +1,28 @@
 #include "../include/part.h"
 
-int Part::getPartId() { return this->partId; }
+int Part::getPartId() const { return partId; }
 
-void Part::setPartId(int& partId) { this->partId = partId; }
+void Part::setPartId(int partId) { this->partId = partId; }
 
-int Part::getKitId() { return this->kitId; }
+int Part::getKitId() const { return kitId; }
 
-void Part::setKitId(int& kitId) { this->kitId = kitId; }
+void Part::setKitId(int kitId) { this->kitId = kitId; }
 
-QString Part::getPartName() { return this->partName; }
+QString Part::getPartName() const { return partName; }
 
-void Part::setPartName(QString& partName) { this->partName; }
+void Part::setPartName(const QString& partName) { this->partName = partName; }
 
-int Part::getPartCount() { return this->partCount; }
+int Part::getPartCount() const { return partCount; }
 
-void Part::setPartCount(int& partCount) { this->partCount; }
+void Part::setPartCount(int partCount) { this->partCount = partCount; }
 
-QDate Part::getPartFinishDate() { return this->partFinishDate; }
+QDate Part::getPartFinishDate() const { return partFinishDate; }
 
-void Part::setPartFinishDate(QDate& partFinishDate) { this->partFinishDate = partFinishDate; }
+void Part::setPartFinishDate(const QDate& partFinishDate) { this->partFinishDate = partFinishDate; }
 
-Part::Part(int& partId, int& kitId, QString& partName, int& partCount, QDate& partFinishDate)
+Part::Part() {}
+
+Part::Part(int partId, int kitId, const QString& partName, int partCount, const QDate& partFinishDate)
     : partId(partId)
     , kitId(kitId)
     , partName(partName)

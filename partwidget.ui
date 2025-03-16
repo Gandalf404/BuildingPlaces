@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PartWidget</class>
+ <widget class="QWidget" name="PartWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>723</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>150</y>
+     <width>160</width>
+     <height>189</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="partIdLineEdit">
+      <property name="placeholderText">
+       <string>Код запчасти</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="kitIdComboBox">
+      <property name="placeholderText">
+       <string>Код комплекта</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="partCountLineEdit">
+      <property name="placeholderText">
+       <string>Количество запчастей</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="partNameLineEdit">
+      <property name="placeholderText">
+       <string>Наименование запчасти</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="partFinishDateEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="savePushButton">
+      <property name="text">
+       <string>СОХРАНИТЬ</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

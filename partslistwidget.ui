@@ -22,11 +22,17 @@
   <widget class="QTableView" name="partsListTableView">
    <property name="geometry">
     <rect>
-     <x>5</x>
+     <x>-5</x>
      <y>51</y>
-     <width>791</width>
+     <width>811</width>
      <height>481</height>
     </rect>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
    </property>
    <attribute name="horizontalHeaderMinimumSectionSize">
     <number>41</number>
@@ -34,6 +40,91 @@
    <attribute name="horizontalHeaderDefaultSectionSize">
     <number>175</number>
    </attribute>
+  </widget>
+  <widget class="QPushButton" name="addPartPushButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>550</y>
+     <width>121</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ДОБАВИТЬ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="editPartPushButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>550</y>
+     <width>121</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ИЗМЕНИТЬ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deletePartPushButton">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>550</y>
+     <width>121</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>УДАЛИТЬ</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="searchLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>211</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Поиск</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="partIdComboBox">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>121</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="kitIdComboBox">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>10</y>
+     <width>121</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="partNameComboBox">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>10</y>
+     <width>121</width>
+     <height>26</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>

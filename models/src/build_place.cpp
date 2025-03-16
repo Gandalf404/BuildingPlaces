@@ -1,18 +1,18 @@
 #include "../include/build_place.h"
 
-int BuildPlace::getBuildPlaceId() { return this->buildPlaceId; }
+int BuildPlace::getBuildPlaceId() const { return buildPlaceId; }
 
-void BuildPlace::setBuildPlaceId(int& buildPlaceId) { this->buildPlaceId = buildPlaceId; }
+void BuildPlace::setBuildPlaceId(int buildPlaceId) { this->buildPlaceId = buildPlaceId; }
 
-int BuildPlace::getPartId() { return this->partId; }
+int BuildPlace::getPartId() const { return partId; }
 
-void BuildPlace::setPartId(int& partId) { this->partId = partId; }
+void BuildPlace::setPartId(int partId) { this->partId = partId; }
 
-int BuildPlace::getKitId() { this->kitId; }
+int BuildPlace::getKitId() const { return kitId; }
 
-void BuildPlace::setKitId(int& kitId) { this->kitId = kitId; }
+void BuildPlace::setKitId(int kitId) { this->kitId = kitId; }
 
-BuildPlace::BuildPlace(int& buildPlaceId, int& partId, int& kitId)
+BuildPlace::BuildPlace(int buildPlaceId, int partId, int kitId)
     : buildPlaceId(buildPlaceId)
     , partId(partId)
     , kitId(kitId)

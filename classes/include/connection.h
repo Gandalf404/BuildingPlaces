@@ -3,6 +3,7 @@
 
 #include <QSqlDatabase>
 #include <QFile>
+#include <QMessageBox>
 
 class Connection
 {

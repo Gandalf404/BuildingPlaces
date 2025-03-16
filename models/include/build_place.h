@@ -1,8 +1,6 @@
 #ifndef BUILD_PLACE_H
 #define BUILD_PLACE_H
 
-#include <optional>
-
 class BuildPlace
 {
 private:
@@ -10,14 +8,14 @@ private:
     int partId;
     int kitId;
 public:
-    int getBuildPlaceId();
-    void setBuildPlaceId(int& buildPlaceId);
-    int getPartId();
-    void setPartId(int& partId);
-    int getKitId();
-    void setKitId(int& kitId);
+    int getBuildPlaceId() const;
+    void setBuildPlaceId(int buildPlaceId);
+    int getPartId() const;
+    void setPartId(int partId);
+    int getKitId() const;
+    void setKitId(int kitId);
 
-    BuildPlace(std::optional<BuildPlace&> buildPlace);
-    BuildPlace(int& buildPlaceId, int& partId, int& kitId);
+    BuildPlace();
+    BuildPlace(int buildPlaceId, int partId, int kitId);
 };
 #endif //BUILD_PLACE_H

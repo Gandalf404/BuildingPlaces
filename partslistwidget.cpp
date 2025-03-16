@@ -2,6 +2,7 @@
 #include "ui_partslistwidget.h"
 
 #include <QSqlError>
+#include <QMessageBox>
 
 PartsListWidget::PartsListWidget(QWidget *parent)
     : QWidget(parent)
@@ -10,6 +11,7 @@ PartsListWidget::PartsListWidget(QWidget *parent)
     ui->setupUi(this);
     con.connect();
     model = new QSqlRelationalTableModel(parent, con.getDatabaseConnection());
+    model->setEditStrategy(QSqlRelationalTableModel::OnManualSubmit);
     model->setTable("part");
     model->setRelation(1, QSqlRelation("kit", "kit_id", "kit_id"));
     model->select();
@@ -19,10 +21,38 @@ PartsListWidget::PartsListWidget(QWidget *parent)
     model->setHeaderData(3, Qt::Horizontal, tr("Количество запчастей"));
     model->setHeaderData(4, Qt::Horizontal, tr("part_finish_date"));
     ui->partsListTableView->setModel(model);
-    ui->partsListTableView->horizontalHeader()->setMinimumWidth(300);
 }
 
 PartsListWidget::~PartsListWidget()
 {
     delete ui;
+    delete model;
 }
+
+void PartsListWidget::on_addPartPushButton_clicked()
+{
+    this->hide();
+    partWidget = new PartWidget(nullptr);
+    partWidget->show();
+}
+
+void PartsListWidget::on_editPartPushButton_clicked()
+{
+    this->hide();
+
+    //QMap<int, QVariant> a = ui->partsListTableView->model()->itemData(ui->partsListTableView->currentIndex());
+    partWidget = new PartWidget(nullptr, part, ui->partsListTableView->currentIndex());
+    partWidget->show();
+}
+
+void PartsListWidget::on_deletePartPushButton_clicked()
+{
+    if (QMessageBox::question(ui->partsListTableView, "Внимание", "Вы действительно хотите удалить данную запчасть ?") == QMessageBox::Yes)
+    {
+        int selectedRow = ui->partsListTableView->currentIndex().row();
+        model->removeRow(selectedRow);
+        model->submitAll();
+        model->select();
+    }
+}
+

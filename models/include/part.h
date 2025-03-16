@@ -2,7 +2,6 @@
 #define PART_H
 
 #include <QDate>
-#include <optional>
 
 class Part
 {
@@ -13,18 +12,18 @@ private:
     int partCount;
     QDate partFinishDate;
 public:
-    int getPartId();
-    void setPartId(int& partId);
-    int getKitId();
-    void setKitId(int& kitId);
-    QString getPartName();
-    void setPartName(QString& partName);
-    int getPartCount();
-    void setPartCount(int& partCount);
-    QDate getPartFinishDate();
-    void setPartFinishDate(QDate& partFinishDate);
+    int getPartId() const;
+    void setPartId(int partId);
+    int getKitId() const;
+    void setKitId(int kitId);
+    QString getPartName() const;
+    void setPartName(const QString& partName);
+    int getPartCount() const;
+    void setPartCount(int partCount);
+    QDate getPartFinishDate() const;
+    void setPartFinishDate(const QDate& partFinishDate);
 
-    Part(std::optional<Part&> part);
-    Part(int& partId, int& kitId, QString& partName, int& partCount, QDate& partFinishDate);
+    Part();
+    Part(int partId, int kitId, const QString& partName, int partCount, const QDate& partFinishDate);
 };
 #endif //PART_H
